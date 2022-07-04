@@ -187,8 +187,8 @@ macro(build_ogre)
     #   ${Patch_EXECUTABLE} -p1 -N < ${CMAKE_CURRENT_SOURCE_DIR}/pragma-patch.diff &&
     #   ${Patch_EXECUTABLE} -p1 -N < ${CMAKE_CURRENT_SOURCE_DIR}/fix-arm64.diff &&
     #   ${Patch_EXECUTABLE} -p1 -N < ${CMAKE_CURRENT_SOURCE_DIR}/relocatable.patch
-    COMMAND
-      ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/FindFreetype.cmake ${CMAKE_CURRENT_BINARY_DIR}/ogre-v13.4.1-prefix/src/ogre-v13.4.1/CMake/Packages/FindFreetype.cmake
+    # COMMAND
+    #   ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/FindFreetype.cmake ${CMAKE_CURRENT_BINARY_DIR}/ogre-v13.4.1-prefix/src/ogre-v13.4.1/CMake/Packages/FindFreetype.cmake
   )
 
   if(BUILDING_FREETYPE_LOCALLY)
