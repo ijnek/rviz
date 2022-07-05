@@ -19,18 +19,21 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <build_depend>git</build_depend>
-  <build_depend>pkg-config</build_depend>
+  <!-- <build_depend>git</build_depend> -->
+  <!-- <build_depend>pkg-config</build_depend> -->
 
-  <build_depend>libfreetype6-dev</build_depend>
-  <build_export_depend>libfreetype6-dev</build_export_depend>
-  <exec_depend>libfreetype6</exec_depend>
+  <!-- <build_depend>libfreetype6-dev</build_depend> -->
+  <!-- <build_export_depend>libfreetype6-dev</build_export_depend> -->
+  <!-- <exec_depend>libfreetype6</exec_depend> -->
 
-  <depend>libx11-dev</depend>
-  <depend>libxaw</depend>
+  <!-- <depend>libx11-dev</depend> -->
+  <!-- <depend>libxaw</depend> -->
   <depend>libxrandr</depend>
-  <depend>opengl</depend>
-  <depend>pugixml-dev</depend>
+  <!-- <depend>opengl</depend> -->
+  <!-- <depend>libfreeimage-dev</depend> -->
+  <!-- <depend>pugixml-dev</depend -->
+  <depend>libvulkan-dev</depend>
+
 
   <test_depend>ament_cmake_xmllint</test_depend>
   <test_depend>ament_lint_auto</test_depend>

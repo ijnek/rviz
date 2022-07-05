@@ -117,10 +117,10 @@ public:
   Ogre::Viewport * getViewport() const;
 
   /// Set the camera associated with this render window's viewport.
-  void setCamera(Ogre::Camera * camera);
+  void setCamera(Ogre::SceneNode * camera);
 
   /// Get the camera.
-  Ogre::Camera * getCamera() const;
+  Ogre::SceneNode * getCamera() const;
 
   /// Get the main directional light.
   Ogre::Light * getDirectionalLight() const;
@@ -186,6 +186,7 @@ protected:
   Ogre::FrameListener * ogre_frame_listener_;
   Ogre::SceneManager * ogre_scene_manager_;
   Ogre::Camera * ogre_camera_;
+  Ogre::SceneNode * ogre_camera_node_;
   Ogre::Light * ogre_directional_light_;
 
   bool animating_;
@@ -204,8 +205,8 @@ protected:
   // // stereo rendering
   // bool stereo_enabled_;                         // true if we were asked to render stereo
   // bool rendering_stereo_;                       // true if we are actually rendering stereo
-  // Ogre::Camera * left_camera_;
-  // Ogre::Camera * right_camera_;
+  // Ogre::SceneNode * left_camera_;
+  // Ogre::SceneNode * right_camera_;
   // Ogre::Viewport * right_viewport_;
 
   setupSceneCallback setup_scene_callback_;

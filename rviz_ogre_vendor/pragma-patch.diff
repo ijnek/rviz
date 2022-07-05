@@ -5,7 +5,7 @@ index 44db2a6bb..286f7d083 100644
 @@ -27,6 +27,11 @@ THE SOFTWARE
  #ifndef _Font_H__
  #define _Font_H__
- 
+
 +#ifdef _WIN32
 +#pragma warning(push)
 +#pragma warning(disable:4251)
@@ -17,7 +17,7 @@ index 44db2a6bb..286f7d083 100644
 @@ -425,4 +430,8 @@ namespace Ogre
      /** @} */
  }
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
@@ -28,14 +28,14 @@ index 5b9cababd..dda7a57b3 100644
 --- a/Components/Overlay/include/OgreOverlayProfileSessionListener.h
 +++ b/Components/Overlay/include/OgreOverlayProfileSessionListener.h
 @@ -28,6 +28,10 @@ THE SOFTWARE.
- 
+
  #ifndef __OverlayProfileSessionListener_H__
  #define __OverlayProfileSessionListener_H__
 +#ifdef _WIN32
 +#pragma warning(push)
 +#pragma warning(disable:4251)
 +#endif
- 
+
  #include "OgreOverlayPrerequisites.h"
  #include "OgreProfiler.h"
 @@ -151,4 +155,8 @@ namespace Ogre  {
@@ -60,19 +60,19 @@ index 755e76d00..38c86cfea 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -331,5 +336,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreAutoParamDataSource.h b/OgreMain/include/OgreAutoParamDataSource.h
 index bb35d6226..da6f2f18c 100644
 --- a/OgreMain/include/OgreAutoParamDataSource.h
@@ -86,7 +86,7 @@ index bb35d6226..da6f2f18c 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -267,5 +272,9 @@ namespace Ogre {
@@ -97,7 +97,7 @@ index bb35d6226..da6f2f18c 100644
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreAxisAlignedBox.h b/OgreMain/include/OgreAxisAlignedBox.h
 index c543a44d7..875333451 100644
@@ -112,9 +112,9 @@ index c543a44d7..875333451 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include <array>
- 
+
 @@ -808,5 +813,9 @@ namespace Ogre {
      /** @} */
      /** @} */
@@ -123,14 +123,14 @@ index c543a44d7..875333451 100644
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreBillboard.h b/OgreMain/include/OgreBillboard.h
 index cd4420cf6..324b87b99 100644
 --- a/OgreMain/include/OgreBillboard.h
 +++ b/OgreMain/include/OgreBillboard.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __Billboard_H__
  #define __Billboard_H__
 +#ifdef _WIN32
@@ -138,25 +138,25 @@ index cd4420cf6..324b87b99 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -225,5 +230,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreBillboardChain.h b/OgreMain/include/OgreBillboardChain.h
 index 97cadc3f6..6105d88ea 100644
 --- a/OgreMain/include/OgreBillboardChain.h
 +++ b/OgreMain/include/OgreBillboardChain.h
 @@ -31,6 +31,11 @@ THE SOFTWARE.
- 
+
  #ifndef _BillboardChain_H__
  #define _BillboardChain_H__
 +#ifdef _WIN32
@@ -164,17 +164,17 @@ index 97cadc3f6..6105d88ea 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -384,6 +389,8 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
  #endif
- 
+
 -
 +#endif
 diff --git a/OgreMain/include/OgreBillboardParticleRenderer.h b/OgreMain/include/OgreBillboardParticleRenderer.h
@@ -190,25 +190,25 @@ index 9187f687f..ce9606764 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreParticleSystemRenderer.h"
 @@ -262,5 +267,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif // __BillboardParticleRenderer_H__
- 
+
 diff --git a/OgreMain/include/OgreBillboardSet.h b/OgreMain/include/OgreBillboardSet.h
 index c8ab575a1..cb3ef2e28 100644
 --- a/OgreMain/include/OgreBillboardSet.h
 +++ b/OgreMain/include/OgreBillboardSet.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __BillboardSet_H__
  #define __BillboardSet_H__
 +#ifdef _WIN32
@@ -216,25 +216,25 @@ index c8ab575a1..cb3ef2e28 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -847,5 +852,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __BillboardSet_H__
 diff --git a/OgreMain/include/OgreBone.h b/OgreMain/include/OgreBone.h
 index 8ffc52cf1..191e28ecc 100644
 --- a/OgreMain/include/OgreBone.h
 +++ b/OgreMain/include/OgreBone.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __Bone_H__
  #define __Bone_H__
 +#ifdef _WIN32
@@ -242,18 +242,18 @@ index 8ffc52cf1..191e28ecc 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreNode.h"
 @@ -152,5 +157,9 @@ namespace Ogre
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreCamera.h b/OgreMain/include/OgreCamera.h
 index 263c364c1..a1988cba8 100644
@@ -268,18 +268,18 @@ index 263c364c1..a1988cba8 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Default options
  #include "OgrePrerequisites.h"
 @@ -666,5 +671,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __Camera_H__
 diff --git a/OgreMain/include/OgreCompositionPass.h b/OgreMain/include/OgreCompositionPass.h
 index 1c2196796..a9867d32c 100644
@@ -294,18 +294,18 @@ index 1c2196796..a9867d32c 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreHeaderPrefix.h"
 @@ -382,5 +387,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreConvexBody.h b/OgreMain/include/OgreConvexBody.h
 index 4982280b6..57defd5d5 100644
@@ -320,25 +320,25 @@ index 4982280b6..57defd5d5 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgrePolygon.h"
 @@ -257,5 +262,9 @@ namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- #endif 
- 
+ #endif
+
 diff --git a/OgreMain/include/OgreDualQuaternion.h b/OgreMain/include/OgreDualQuaternion.h
 index e63c46cb8..cab7cf1df 100644
 --- a/OgreMain/include/OgreDualQuaternion.h
 +++ b/OgreMain/include/OgreDualQuaternion.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __DualQuaternion_H__
  #define __DualQuaternion_H__
 +#ifdef _WIN32
@@ -346,19 +346,19 @@ index e63c46cb8..cab7cf1df 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMath.h"
 @@ -180,5 +185,9 @@ namespace Ogre {
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
- #endif 
+
+ #endif
 diff --git a/OgreMain/include/OgreEdgeListBuilder.h b/OgreMain/include/OgreEdgeListBuilder.h
 index 2c86e620f..6f8961d6b 100644
 --- a/OgreMain/include/OgreEdgeListBuilder.h
@@ -372,19 +372,19 @@ index 2c86e620f..6f8961d6b 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreRenderOperation.h"
 @@ -275,5 +280,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreEntity.h b/OgreMain/include/OgreEntity.h
 index d42d8a6b7..b6d405df0 100644
 --- a/OgreMain/include/OgreEntity.h
@@ -398,18 +398,18 @@ index d42d8a6b7..b6d405df0 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -916,5 +921,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __Entity_H__
 diff --git a/OgreMain/include/OgreFrustum.h b/OgreMain/include/OgreFrustum.h
 index 885d7c9f1..cc2cab2dc 100644
@@ -424,18 +424,18 @@ index 885d7c9f1..cc2cab2dc 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMovableObject.h"
 @@ -674,5 +679,9 @@ namespace Ogre
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __Frustum_H__
 diff --git a/OgreMain/include/OgreGpuProgram.h b/OgreMain/include/OgreGpuProgram.h
 index 283cdf514..b10e86364 100644
@@ -450,18 +450,18 @@ index 283cdf514..b10e86364 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -442,5 +447,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreGpuProgramParams.h b/OgreMain/include/OgreGpuProgramParams.h
 index 946b50d4f..f894e513a 100644
@@ -476,18 +476,18 @@ index 946b50d4f..f894e513a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -2083,5 +2088,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreHardwareBuffer.h b/OgreMain/include/OgreHardwareBuffer.h
 index 729bd3046..3ddc80bf6 100644
@@ -501,7 +501,7 @@ index 729bd3046..3ddc80bf6 100644
 +#pragma warning(push)
 +#pragma warning(disable:4251)
 +#endif
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -440,6 +444,8 @@ namespace Ogre {
@@ -511,7 +511,7 @@ index 729bd3046..3ddc80bf6 100644
 +#ifdef _WIN32
 +#pragma warning(pop)
  #endif
- 
+
 -
 +#endif
 diff --git a/OgreMain/include/OgreInstanceBatch.h b/OgreMain/include/OgreInstanceBatch.h
@@ -527,18 +527,18 @@ index ece52a464..b457e42f8 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreRenderOperation.h"
 @@ -363,5 +368,9 @@ namespace Ogre
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __InstanceBatch_H__
 diff --git a/OgreMain/include/OgreInstanceManager.h b/OgreMain/include/OgreInstanceManager.h
 index ea5f56d1e..4b8d8d0a0 100644
@@ -553,18 +553,18 @@ index ea5f56d1e..4b8d8d0a0 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreRenderOperation.h"
 @@ -319,5 +324,9 @@ namespace Ogre
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __InstanceManager_H__
 diff --git a/OgreMain/include/OgreInstancedEntity.h b/OgreMain/include/OgreInstancedEntity.h
 index 27f9592d1..4dd1ea205 100644
@@ -579,25 +579,25 @@ index 27f9592d1..4dd1ea205 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgreMovableObject.h"
  #include "OgreNode.h"
 @@ -294,5 +299,9 @@ namespace Ogre
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreKeyFrame.h b/OgreMain/include/OgreKeyFrame.h
 index f9e2a1054..04d9e373f 100644
 --- a/OgreMain/include/OgreKeyFrame.h
 +++ b/OgreMain/include/OgreKeyFrame.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __KeyFrame_H__
  #define __KeyFrame_H__
 +#ifdef _WIN32
@@ -605,19 +605,19 @@ index f9e2a1054..04d9e373f 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- #include "OgreVector3.h"
+ #include "Ogre.h"
 @@ -256,5 +261,9 @@ namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreLight.h b/OgreMain/include/OgreLight.h
 index 371a605a6..e03d9090a 100644
 --- a/OgreMain/include/OgreLight.h
@@ -631,12 +631,12 @@ index 371a605a6..e03d9090a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -597,4 +602,8 @@ namespace Ogre {
  #include "OgreHeaderSuffix.h"
- 
+
  } // namespace Ogre
 +#ifdef _WIN32
 +#pragma warning(pop)
@@ -648,7 +648,7 @@ index 5fa5fd448..5317fbdd0 100644
 --- a/OgreMain/include/OgreManualObject.h
 +++ b/OgreMain/include/OgreManualObject.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __OgreManualObject_H__
  #define __OgreManualObject_H__
 +#ifdef _WIN32
@@ -656,17 +656,17 @@ index 5fa5fd448..5317fbdd0 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMovableObject.h"
 @@ -595,6 +600,8 @@ namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
  #endif
- 
+
 -
 +#endif
 diff --git a/OgreMain/include/OgreMath.h b/OgreMain/include/OgreMath.h
@@ -682,18 +682,18 @@ index 200146266..a2cc5c894 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreHeaderPrefix.h"
 @@ -811,5 +816,9 @@ namespace Ogre
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreMatrix3.h b/OgreMain/include/OgreMatrix3.h
 index b204bc439..94bab86b2 100644
@@ -708,9 +708,9 @@ index b204bc439..94bab86b2 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -273,4 +278,8 @@ namespace Ogre
      /** @} */
      /** @} */
@@ -733,12 +733,12 @@ index 346f35d8b..83a7ed903 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -583,4 +588,8 @@ namespace Ogre
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
@@ -758,18 +758,18 @@ index 23453a867..ac2ac7e87 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -1039,5 +1044,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __Mesh_H__
 diff --git a/OgreMain/include/OgreMeshManager.h b/OgreMain/include/OgreMeshManager.h
 index 99542ffb1..8b6617d3e 100644
@@ -784,18 +784,18 @@ index 99542ffb1..8b6617d3e 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -479,5 +484,9 @@ namespace Ogre {
  } //namespace
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreMovablePlane.h b/OgreMain/include/OgreMovablePlane.h
 index baa764edd..4b971c67a 100644
@@ -810,18 +810,18 @@ index baa764edd..4b971c67a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -97,5 +102,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreNode.h b/OgreMain/include/OgreNode.h
 index 72bcf8432..e32fdc0ab 100644
@@ -836,18 +836,18 @@ index 72bcf8432..e32fdc0ab 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -687,5 +692,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // _Node_H__
 diff --git a/OgreMain/include/OgreOptimisedUtil.h b/OgreMain/include/OgreOptimisedUtil.h
 index c50407965..82a0f111c 100644
@@ -862,18 +862,18 @@ index c50407965..82a0f111c 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreEdgeListBuilder.h"
 @@ -240,5 +245,9 @@ namespace Ogre {
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif  // __OptimisedUtil_H__
 diff --git a/OgreMain/include/OgreParticle.h b/OgreMain/include/OgreParticle.h
 index 06d0e9b7f..8e7a7dd92 100644
@@ -888,19 +888,19 @@ index 06d0e9b7f..8e7a7dd92 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreHeaderPrefix.h"
 @@ -152,5 +157,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreParticleEmitter.h b/OgreMain/include/OgreParticleEmitter.h
 index 67f13e43f..fb4a9f629 100644
 --- a/OgreMain/include/OgreParticleEmitter.h
@@ -914,19 +914,19 @@ index 67f13e43f..fb4a9f629 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- #include "OgreVector3.h"
+ #include "Ogre.h"
 @@ -520,5 +525,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreParticleSystem.h b/OgreMain/include/OgreParticleSystem.h
 index 1144ebdb1..2e091dd05 100644
 --- a/OgreMain/include/OgreParticleSystem.h
@@ -940,18 +940,18 @@ index 1144ebdb1..2e091dd05 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -885,5 +890,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePass.h b/OgreMain/include/OgrePass.h
 index 6caa43631..c38b54a3a 100644
@@ -966,18 +966,18 @@ index 6caa43631..c38b54a3a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreColourValue.h"
 @@ -1754,5 +1759,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePatchSurface.h b/OgreMain/include/OgrePatchSurface.h
 index 1b3e21db0..b6c910b44 100644
@@ -992,25 +992,25 @@ index 1b3e21db0..b6c910b44 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -238,5 +243,9 @@ namespace Ogre {
  } // namespace
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePlane.h b/OgreMain/include/OgrePlane.h
 index ebb3f703b..955c0c215 100644
 --- a/OgreMain/include/OgrePlane.h
 +++ b/OgreMain/include/OgrePlane.h
 @@ -35,6 +35,11 @@ THE SOFTWARE.
- 
+
  #ifndef __Plane_H__
  #define __Plane_H__
 +#ifdef _WIN32
@@ -1018,18 +1018,18 @@ index ebb3f703b..955c0c215 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -277,5 +282,9 @@ namespace Ogre {
      /** @} */
- 
+
  } // namespace Ogre
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePlaneBoundedVolume.h b/OgreMain/include/OgrePlaneBoundedVolume.h
 index 3d4c08e34..408bf70ef 100644
@@ -1044,19 +1044,19 @@ index 3d4c08e34..408bf70ef 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -134,5 +139,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgrePolygon.h b/OgreMain/include/OgrePolygon.h
 index 7528f4141..1997ab6a5 100644
 --- a/OgreMain/include/OgrePolygon.h
@@ -1070,18 +1070,18 @@ index 7528f4141..1997ab6a5 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- #include "OgreVector3.h"
+ #include "Ogre.h"
 @@ -144,5 +149,9 @@ namespace Ogre
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePose.h b/OgreMain/include/OgrePose.h
 index 3a20408ce..30ee20c57 100644
@@ -1096,18 +1096,18 @@ index 3a20408ce..30ee20c57 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -139,5 +144,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgrePrerequisites.h b/OgreMain/include/OgrePrerequisites.h
 index 71a0395d5..e5381990a 100644
@@ -1122,26 +1122,26 @@ index 71a0395d5..e5381990a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Platform-specific stuff
  #include "OgrePlatform.h"
 @@ -375,6 +380,9 @@ namespace Ogre
      };
  } // Ogre
- 
+
 -#endif // __OgrePrerequisites_H__
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
- 
+
 +#endif // __OgrePrerequisites_H__
- 
+
 diff --git a/OgreMain/include/OgreQuaternion.h b/OgreMain/include/OgreQuaternion.h
 index c82bbdaf6..edfbaee45 100644
 --- a/OgreMain/include/OgreQuaternion.h
 +++ b/OgreMain/include/OgreQuaternion.h
 @@ -35,6 +35,11 @@ THE SOFTWARE.
- 
+
  #ifndef __Quaternion_H__
  #define __Quaternion_H__
 +#ifdef _WIN32
@@ -1149,19 +1149,19 @@ index c82bbdaf6..edfbaee45 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMath.h"
 @@ -363,5 +368,9 @@ namespace Ogre {
- 
- 
- 
+
+
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
- #endif 
+
+ #endif
 diff --git a/OgreMain/include/OgreRay.h b/OgreMain/include/OgreRay.h
 index 1b44cee66..e689cabce 100644
 --- a/OgreMain/include/OgreRay.h
@@ -1175,12 +1175,12 @@ index 1b44cee66..e689cabce 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -152,4 +157,8 @@ namespace Ogre {
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
@@ -1200,17 +1200,17 @@ index b3f58eff2..9037bd811 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -96,6 +101,8 @@ namespace Ogre {
- 
+
  }// namespace
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
  #endif
- 
+
 -
 +#endif
 diff --git a/OgreMain/include/OgreRenderSystem.h b/OgreMain/include/OgreRenderSystem.h
@@ -1226,18 +1226,18 @@ index f81349ca0..1ef1be595 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -1260,5 +1265,9 @@ namespace Ogre
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreRenderable.h b/OgreMain/include/OgreRenderable.h
 index 82f9be8e9..85edc5a50 100644
@@ -1252,12 +1252,12 @@ index 82f9be8e9..85edc5a50 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -421,4 +426,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +
 +#ifdef _WIN32
@@ -1278,18 +1278,18 @@ index 3dfcf98ea..49775daab 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -3586,5 +3591,9 @@ namespace Ogre {
  } // Namespace
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreSceneNode.h b/OgreMain/include/OgreSceneNode.h
 index 87e1e9d1e..e9140ed36 100644
@@ -1304,18 +1304,18 @@ index 87e1e9d1e..e9140ed36 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -459,5 +464,9 @@ namespace Ogre {
  }// namespace
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreSceneQuery.h b/OgreMain/include/OgreSceneQuery.h
 index 2eecd1bc8..8c57438ff 100644
@@ -1330,25 +1330,25 @@ index 2eecd1bc8..8c57438ff 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreSphere.h"
 @@ -555,5 +560,9 @@ namespace Ogre {
  }
-     
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreSerializer.h b/OgreMain/include/OgreSerializer.h
 index 311b2808a..2ba20b23d 100644
 --- a/OgreMain/include/OgreSerializer.h
 +++ b/OgreMain/include/OgreSerializer.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __Serializer_H__
  #define __Serializer_H__
 +#ifdef _WIN32
@@ -1356,18 +1356,18 @@ index 311b2808a..2ba20b23d 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreHeaderPrefix.h"
 @@ -128,5 +133,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreShadowCameraSetupFocused.h b/OgreMain/include/OgreShadowCameraSetupFocused.h
 index 2a41f0d53..6947f2f60 100644
@@ -1382,18 +1382,18 @@ index 2a41f0d53..6947f2f60 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreShadowCameraSetup.h"
 @@ -310,5 +315,9 @@ namespace Ogre {
  } // namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __ShadowCameraSetupFocused_H__
 diff --git a/OgreMain/include/OgreShadowCameraSetupLiSPSM.h b/OgreMain/include/OgreShadowCameraSetupLiSPSM.h
 index 3c65077e4..5d04739e7 100644
@@ -1408,19 +1408,19 @@ index 3c65077e4..5d04739e7 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreShadowCameraSetupFocused.h"
 @@ -246,5 +251,9 @@ namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreShadowCameraSetupPlaneOptimal.h b/OgreMain/include/OgreShadowCameraSetupPlaneOptimal.h
 index 5abd5ac81..e23916f2a 100644
 --- a/OgreMain/include/OgreShadowCameraSetupPlaneOptimal.h
@@ -1434,18 +1434,18 @@ index 5abd5ac81..e23916f2a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreShadowCameraSetup.h"
 @@ -91,5 +96,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreShadowCaster.h b/OgreMain/include/OgreShadowCaster.h
 index 2d5b3b978..73117c412 100644
@@ -1460,7 +1460,7 @@ index 2d5b3b978..73117c412 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreRenderable.h"
 @@ -248,5 +253,9 @@ namespace Ogre {
@@ -1471,14 +1471,14 @@ index 2d5b3b978..73117c412 100644
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif // __ShadowCaster_H__
 diff --git a/OgreMain/include/OgreSimpleSpline.h b/OgreMain/include/OgreSimpleSpline.h
 index 53307d054..484545649 100644
 --- a/OgreMain/include/OgreSimpleSpline.h
 +++ b/OgreMain/include/OgreSimpleSpline.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __SimpleSpline_H__
  #define __SimpleSpline_H__
 +#ifdef _WIN32
@@ -1486,19 +1486,19 @@ index 53307d054..484545649 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMatrix4.h"
 @@ -135,5 +140,9 @@ namespace Ogre {
  #include "OgreHeaderSuffix.h"
- 
- 
+
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreSkeletonFileFormat.h b/OgreMain/include/OgreSkeletonFileFormat.h
 index bf5bcd70e..e33bc460d 100644
 --- a/OgreMain/include/OgreSkeletonFileFormat.h
@@ -1512,25 +1512,25 @@ index bf5bcd70e..e33bc460d 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -113,5 +118,9 @@ namespace Ogre {
- 
+
  } // namespace
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreSkeletonInstance.h b/OgreMain/include/OgreSkeletonInstance.h
 index 8e2482c11..66ca9c768 100644
 --- a/OgreMain/include/OgreSkeletonInstance.h
 +++ b/OgreMain/include/OgreSkeletonInstance.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __SkeletonInstance_H__
  #define __SkeletonInstance_H__
 +#ifdef _WIN32
@@ -1538,19 +1538,19 @@ index 8e2482c11..66ca9c768 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreSkeleton.h"
 @@ -157,5 +162,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreSphere.h b/OgreMain/include/OgreSphere.h
 index e1b7b8afb..7b6e1517d 100644
 --- a/OgreMain/include/OgreSphere.h
@@ -1564,19 +1564,19 @@ index e1b7b8afb..7b6e1517d 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  // Precompiler options
  #include "OgrePrerequisites.h"
 @@ -134,5 +139,9 @@ namespace Ogre {
- 
+
  }
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreStaticGeometry.h b/OgreMain/include/OgreStaticGeometry.h
 index eff3e95a0..307ed39b3 100644
 --- a/OgreMain/include/OgreStaticGeometry.h
@@ -1590,19 +1590,19 @@ index eff3e95a0..307ed39b3 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreMovableObject.h"
 @@ -778,5 +783,9 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreStreamSerialiser.h b/OgreMain/include/OgreStreamSerialiser.h
 index a4d13e535..37a854719 100644
 --- a/OgreMain/include/OgreStreamSerialiser.h
@@ -1616,25 +1616,25 @@ index a4d13e535..37a854719 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -392,5 +397,9 @@ namespace Ogre
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreStringConverter.h b/OgreMain/include/OgreStringConverter.h
 index a3e4636a3..ecbd11af2 100644
 --- a/OgreMain/include/OgreStringConverter.h
 +++ b/OgreMain/include/OgreStringConverter.h
 @@ -28,6 +28,11 @@ THE SOFTWARE.
- 
+
  #ifndef __StringConverter_H__
  #define __StringConverter_H__
 +#ifdef _WIN32
@@ -1642,19 +1642,19 @@ index a3e4636a3..ecbd11af2 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgreCommon.h"
  #include "OgrePrerequisites.h"
 @@ -361,5 +366,9 @@ namespace Ogre {
- 
- 
- 
+
+
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
  #endif
- 
+
 diff --git a/OgreMain/include/OgreSubMesh.h b/OgreMain/include/OgreSubMesh.h
 index 0e6426ce3..c597be05a 100644
 --- a/OgreMain/include/OgreSubMesh.h
@@ -1668,17 +1668,17 @@ index 0e6426ce3..c597be05a 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -297,6 +302,8 @@ namespace Ogre {
- 
+
  #include "OgreHeaderSuffix.h"
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
  #endif
- 
+
 -
 +#endif
 diff --git a/OgreMain/include/OgreTangentSpaceCalc.h b/OgreMain/include/OgreTangentSpaceCalc.h
@@ -1694,18 +1694,18 @@ index 783d91304..362fb5151 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreRenderOperation.h"
 @@ -264,5 +269,9 @@ namespace Ogre
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/include/OgreTextureManager.h b/OgreMain/include/OgreTextureManager.h
 index 6235951c2..822c7bd73 100644
@@ -1714,18 +1714,18 @@ index 6235951c2..822c7bd73 100644
 @@ -28,6 +28,10 @@ THE SOFTWARE.
  #ifndef _TextureManager_H__
  #define _TextureManager_H__
- 
+
 +#ifdef _WIN32
 +#pragma warning(push)
 +#pragma warning(disable:4251)
 +#endif
- 
+
  #include "OgrePrerequisites.h"
- 
+
 @@ -475,4 +479,8 @@ namespace Ogre {
      /** @} */
  }// Namespace
- 
+
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
@@ -1744,12 +1744,12 @@ index 2e08a5414..c842987af 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
- 
+
+
  #include "OgrePrerequisites.h"
 @@ -910,4 +915,8 @@ namespace Ogre
      /** @} */
- 
+
  }
 +#ifdef _WIN32
 +#pragma warning(pop)
@@ -1769,25 +1769,25 @@ index 72d68d97f..c41a561f0 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgrePrerequisites.h"
  #include "OgreCommon.h"
 @@ -442,5 +447,9 @@ namespace Ogre {
  }
- 
+
  #include "OgreHeaderSuffix.h"
 +#ifdef _WIN32
 +#pragma warning(pop)
 +#endif
 +
- 
+
  #endif
 diff --git a/OgreMain/src/OgreStableHeaders.h b/OgreMain/src/OgreStableHeaders.h
 index 071039a86..efe8859fc 100644
 --- a/OgreMain/src/OgreStableHeaders.h
 +++ b/OgreMain/src/OgreStableHeaders.h
 @@ -34,6 +34,11 @@ THE SOFTWARE.
- 
+
  #ifndef __OgreStableHeaders__
  #define __OgreStableHeaders__
 +#ifdef _WIN32
@@ -1795,7 +1795,7 @@ index 071039a86..efe8859fc 100644
 +#pragma warning(disable:4251)
 +#endif
 +
- 
+
  #include "OgreConfig.h"
  #include "OgreExports.h"
 @@ -108,5 +113,9 @@ THE SOFTWARE.
@@ -1806,8 +1806,8 @@ index 071039a86..efe8859fc 100644
 +#pragma warning(pop)
 +#endif
 +
- 
- #endif 
+
+ #endif
 diff --git a/PlugIns/OctreeZone/CMakeLists.txt b/PlugIns/OctreeZone/CMakeLists.txt
 --- a/PlugIns/OctreeZone/CMakeLists.txt	2019-06-24 23:04:20.000000000 +0000
 +++ b/PlugIns/OctreeZone/CMakeLists.txt	2019-10-04 16:58:03.669588969 +0000
@@ -1827,14 +1827,14 @@ diff --git a/OgreMain/include/OgreTimer.h b/OgreMain/include/OgreTimer.h
 --- a/OgreMain/include/OgreTimer.h	2019-06-24 16:04:20.000000000 -0700
 +++ b/OgreMain/include/OgreTimer.h	2019-10-10 12:33:07.243621900 -0700
 @@ -28,6 +28,10 @@ THE SOFTWARE.
- 
+
  #ifndef __OGRE_TIMER_H__
  #define __OGRE_TIMER_H__
 +#ifdef _WIN32
 +#pragma warning(push)
 +#pragma warning(disable:4251)
 +#endif
- 
+
  #include "OgrePrerequisites.h"
  #include <chrono>
 @@ -59,4 +63,7 @@ namespace Ogre

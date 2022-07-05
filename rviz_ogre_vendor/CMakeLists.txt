@@ -126,32 +126,32 @@ macro(build_ogre)
     # include Clang -Wno-everything to disable warnings in that build. GCC doesn't mind it
     set(OGRE_CXX_FLAGS "${OGRE_CXX_FLAGS} -std=c++14 -w -Wno-everything")
   endif()
-  list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_GL:BOOL=TRUE")
-  list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_D3D11:BOOL=OFF")
-  list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_D3D9:BOOL=OFF")
-  list(APPEND extra_cmake_args "-DCMAKE_C_FLAGS=${OGRE_C_FLAGS}")
-  list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${OGRE_CXX_FLAGS}")
+  # list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_GL:BOOL=TRUE")
+  # list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_D3D11:BOOL=OFF")
+  # list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_D3D9:BOOL=OFF")
+  # list(APPEND extra_cmake_args "-DCMAKE_C_FLAGS=${OGRE_C_FLAGS}")
+  # list(APPEND extra_cmake_args "-DCMAKE_CXX_FLAGS=${OGRE_CXX_FLAGS}")
 
   # Uncomment this line to enable the GL3PLUS render engine
   # list(APPEND extra_cmake_args "-DOGRE_BUILD_RENDERSYSTEM_GL3PLUS:BOOL=TRUE")
 
   # These next lines can be used to disable some of the components or plugins for OGRE
-  list(APPEND extra_cmake_args "-DOGRE_CONFIG_ENABLE_ZIP:BOOL=ON")
+  # list(APPEND extra_cmake_args "-DOGRE_CONFIG_ENABLE_ZIP:BOOL=ON")
 
   if(BUILDING_FREETYPE_LOCALLY)
-    list(APPEND extra_cmake_args
-      "-DFREETYPE_HOME=${CMAKE_CURRENT_BINARY_DIR}/freetype_install")
+    # list(APPENDextra_cmake_args
+    #  "-DFREETYPE_HOME=${CMAKE_CURRENT_BINARY_DIR}/freetype_install")
   endif()
   if(BUILDING_ZLIB_LOCALLY)
-    list(APPEND extra_cmake_args
-      "-DZLIB_ROOT=${CMAKE_CURRENT_BINARY_DIR}/zlib-install")
+    # list(APPEND extra_cmake_args
+    #  "-DZLIB_ROOT=${CMAKE_CURRENT_BINARY_DIR}/zlib-install")
   endif()
 
   if(DEFINED CMAKE_TOOLCHAIN_FILE)
-    list(APPEND extra_cmake_args "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}")
+    # list(APPEND extra_cmake_args "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}")
   else()
-    list(APPEND extra_cmake_args "-DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}")
-    list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
+    # list(APPEND extra_cmake_args "-DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}")
+    # list(APPEND extra_cmake_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
   endif()
 
   find_package(Patch REQUIRED)
@@ -163,24 +163,24 @@ macro(build_ogre)
     LOG_CONFIGURE ${should_log}
     LOG_BUILD ${should_log}
     CMAKE_ARGS
-      -DOGRE_STATIC:BOOL=OFF
-      -DOGRE_DEPENDENCIES_DIR=${CMAKE_CURRENT_BINARY_DIR}/ogredeps
-      -DOGRE_INSTALL_PDB:BOOL=OFF
-      -DOGRE_BUILD_DEPENDENCIES:BOOL=OFF
-      -DOGRE_BUILD_TESTS:BOOL=OFF
-      -DOGRE_BUILD_SAMPLES:BOOL=FALSE
-      -DOGRE_INSTALL_SAMPLES:BOOL=FALSE
-      -DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE
-      -DOGRE_CONFIG_THREADS:STRING=0
-      -DOGRE_RESOURCEMANAGER_STRICT:STRING=2
-      -DCMAKE_SKIP_INSTALL_RPATH:BOOL=ON
-      -DCMAKE_STAGING_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/ogre_install
+      # -DOGRE_STATIC:BOOL=OFF
+      # -DOGRE_DEPENDENCIES_DIR=${CMAKE_CURRENT_BINARY_DIR}/ogredeps
+      # -DOGRE_INSTALL_PDB:BOOL=OFF
+      # -DOGRE_BUILD_DEPENDENCIES:BOOL=OFF
+      # -DOGRE_BUILD_TESTS:BOOL=OFF
+      # -DOGRE_BUILD_SAMPLES:BOOL=FALSE
+      # -DOGRE_INSTALL_SAMPLES:BOOL=FALSE
+      # -DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE
+      # -DOGRE_CONFIG_THREADS:STRING=0
+      # -DOGRE_RESOURCEMANAGER_STRICT:STRING=2
+      # -DCMAKE_SKIP_INSTALL_RPATH:BOOL=ON
+      # -DCMAKE_STAGING_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/ogre_install
       -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}/opt/rviz_ogre_vendor
-      -DOGRE_BUILD_LIBS_AS_FRAMEWORKS:BOOL=OFF
-      -DOGRE_BUILD_COMPONENT_PYTHON:BOOL=FALSE
-      -DOGRE_BUILD_COMPONENT_JAVA:BOOL=FALSE
-      -DOGRE_BUILD_COMPONENT_CSHARP:BOOL=FALSE
-      -DOGRE_BUILD_COMPONENT_BITES:BOOL=FALSE
+      # -DOGRE_BUILD_LIBS_AS_FRAMEWORKS:BOOL=OFF
+      # -DOGRE_BUILD_COMPONENT_PYTHON:BOOL=FALSE
+      # -DOGRE_BUILD_COMPONENT_JAVA:BOOL=FALSE
+      # -DOGRE_BUILD_COMPONENT_CSHARP:BOOL=FALSE
+      # -DOGRE_BUILD_COMPONENT_BITES:BOOL=FALSE
       ${extra_cmake_args}
       -Wno-dev
     # PATCH_COMMAND
@@ -192,20 +192,20 @@ macro(build_ogre)
   )
 
   if(BUILDING_FREETYPE_LOCALLY)
-    add_dependencies(ogre-v13.4.1 freetype-2.8.1)
+    # add_dependencies(ogre-v13.4.1 freetype-2.8.1)
   endif()
   if(BUILDING_ZLIB_LOCALLY)
-    add_dependencies(ogre-v13.4.1 zlib-1.2.11)
+    # add_dependencies(ogre-v13.4.1 zlib-1.2.11)
   endif()
 
   # The external project will install to the build folder, but we'll install that on make install.
-  install(
-    DIRECTORY
-      ${CMAKE_CURRENT_BINARY_DIR}/ogre_install/
-    DESTINATION
-      opt/rviz_ogre_vendor
-    USE_SOURCE_PERMISSIONS
-  )
+  # install(
+  #   DIRECTORY
+  #     ${CMAKE_CURRENT_BINARY_DIR}/
+  #   DESTINATION
+  #     opt/rviz_ogre_vendor
+  #   USE_SOURCE_PERMISSIONS
+  # )
 endmacro()
 
 if(BUILDING_FREETYPE_LOCALLY)
@@ -238,5 +238,5 @@ if(BUILD_TESTING)
 endif()
 
 ament_package(
-  CONFIG_EXTRAS "rviz_ogre_vendor-extras.cmake.in"
+  # CONFIG_EXTRAS "rviz_ogre_vendor-extras.cmake.in"
 )

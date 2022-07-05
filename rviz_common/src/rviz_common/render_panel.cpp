@@ -109,8 +109,11 @@ void RenderPanel::initialize(DisplayContext * context, bool use_main_scene)
     camera_name = "RenderPanelCamera" + std::to_string(count++);
     auto default_camera_ = context_->getSceneManager()->createCamera(camera_name);
     default_camera_->setNearClipDistance(0.01f);
-    default_camera_->setPosition(default_camera_pose_);
-    default_camera_->lookAt(Ogre::Vector3(0, 0, 0));
+
+    auto camera_node_ = context_->getSceneManager()->getRootSceneNode()->createChildSceneNode();
+    camera_node_->attachObject(default_camera_);
+    camera_node_->setPosition(default_camera_pose_);
+    camera_node_->lookAt(Ogre::Vector3(0.0f, 0.0f, 0.0f), Ogre::Node::TS_PARENT);
 
     rviz_rendering::RenderWindowOgreAdapter::setOgreCamera(render_window_, default_camera_);
   }

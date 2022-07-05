@@ -54,7 +54,7 @@
 #include <OgreQuaternion.h>
 #include <OgreRoot.h>
 #include <OgreSceneNode.h>
-#include <OgreVector3.h>
+#include <Ogre.h>
 #include <Overlay/OgreFont.h>  // NOLINT: cpplint cannot handle include order here
 #include <Overlay/OgreFontManager.h>  // NOLINT: cpplint cannot handle include order here
 
