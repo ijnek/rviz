@@ -156,9 +156,9 @@ macro(build_ogre)
 
   find_package(Patch REQUIRED)
   include(ExternalProject)
-  ExternalProject_Add(ogre-v13.4.1
-    URL https://github.com/OGRECave/ogre/archive/refs/tags/v13.4.1.zip
-    URL_MD5 c9970e5a9faf823f417cd92a4872761b
+  ExternalProject_Add(ogre-v1.12.10
+    URL https://github.com/OGRECave/ogre/archive/v1.12.10.zip
+    URL_MD5 c1b870955efddf539385094e9034e7f7
     TIMEOUT 1200
     LOG_CONFIGURE ${should_log}
     LOG_BUILD ${should_log}
