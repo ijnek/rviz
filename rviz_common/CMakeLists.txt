@@ -233,8 +233,8 @@ target_include_directories(rviz_common
 
 target_link_libraries(rviz_common
   PUBLIC
-  rviz_ogre_vendor::OgreMain
-  rviz_ogre_vendor::OgreOverlay
+  OgreMain
+  OgreOverlay
   Qt5::Widgets
 )
 
@@ -342,8 +342,8 @@ if(BUILD_TESTING)
   if(TARGET frame_manager_test)
     target_link_libraries(frame_manager_test
       rviz_common
-      rviz_ogre_vendor::OgreMain
-      rviz_ogre_vendor::OgreOverlay
+      OgreMain
+      OgreOverlay
     )
   endif()
 
@@ -353,8 +353,8 @@ if(BUILD_TESTING)
   if(TARGET rviz_common_config_test)
     target_link_libraries(rviz_common_config_test
       rviz_common
-      rviz_ogre_vendor::OgreMain
-      rviz_ogre_vendor::OgreOverlay
+      OgreMain
+      OgreOverlay
     )
   endif()
 
@@ -364,8 +364,8 @@ if(BUILD_TESTING)
   if(TARGET rviz_common_uniform_string_stream_test)
     target_link_libraries(rviz_common_uniform_string_stream_test
       rviz_common
-      rviz_ogre_vendor::OgreMain
-      rviz_ogre_vendor::OgreOverlay
+      OgreMain
+      OgreOverlay
     )
   endif()
 
@@ -413,8 +413,8 @@ if(BUILD_TESTING)
   if(TARGET selection_manager_test)
     target_link_libraries(selection_manager_test
       rviz_common
-      rviz_ogre_vendor::OgreMain
-      rviz_ogre_vendor::OgreOverlay
+      OgreMain
+      OgreOverlay
     )
   endif()
 
@@ -427,8 +427,8 @@ if(BUILD_TESTING)
   if(TARGET selection_handler_test)
     target_link_libraries(selection_handler_test
       rviz_common
-      rviz_ogre_vendor::OgreMain
-      rviz_ogre_vendor::OgreOverlay
+      OgreMain
+      OgreOverlay
     )
   endif()
 

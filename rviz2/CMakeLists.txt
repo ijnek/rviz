@@ -45,8 +45,8 @@ add_executable(${PROJECT_NAME}
 )
 target_link_libraries(${PROJECT_NAME}
   rviz_common::rviz_common
-  rviz_ogre_vendor::OgreMain
-  rviz_ogre_vendor::OgreOverlay
+  OgreMain
+  OgreOverlay
   Qt5::Widgets
 )
 

@@ -60,7 +60,7 @@ if(BUILD_TESTING)
     ${SKIP_DISPLAY_TESTS})
   if(TARGET mesh_loader_test_target)
     target_link_libraries(mesh_loader_test_target
-      rviz_ogre_vendor::OgreMain
+      OgreMain
       rviz_rendering::rviz_rendering
       resource_retriever::resource_retriever
     )
