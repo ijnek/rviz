@@ -26,6 +26,7 @@
   <build_export_depend>libfreetype6-dev</build_export_depend>
   <exec_depend>libfreetype6</exec_depend>
 
+  <depend>libogre-1.12-dev</depend>
   <depend>libx11-dev</depend>
   <depend>libxaw</depend>
   <depend>libxrandr</depend>
