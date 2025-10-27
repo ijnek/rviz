@@ -68,6 +68,7 @@ bool validateFloats(const visualization_msgs::msg::InteractiveMarker & msg)
 }
 
 InteractiveMarkerDisplay::InteractiveMarkerDisplay()
+  : marker_common_(std::make_unique<MarkerCommon>(this))
 {
   interactive_marker_namespace_property_ = new InteractiveMarkerNamespaceProperty(
     "Interactive Markers Namespace",
@@ -107,6 +108,8 @@ InteractiveMarkerDisplay::InteractiveMarkerDisplay()
 
 void InteractiveMarkerDisplay::onInitialize()
 {
+  marker_common_->initialize(context_, getSceneNode());
+  
   auto ros_node_abstraction = context_->getRosNodeAbstraction().lock();
   if (!ros_node_abstraction) {
     return;
@@ -236,7 +239,7 @@ void InteractiveMarkerDisplay::updateMarkers(
       int_marker_entry = interactive_markers_map_.insert(
         std::make_pair(
           marker.name,
-          std::make_shared<InteractiveMarker>(getSceneNode(), context_))).first;
+          std::make_shared<InteractiveMarker>(getSceneNode(), context_, marker_common_.get()))).first;
       connect(
         int_marker_entry->second.get(),
         SIGNAL(userFeedback(visualization_msgs::msg::InteractiveMarkerFeedback&)),

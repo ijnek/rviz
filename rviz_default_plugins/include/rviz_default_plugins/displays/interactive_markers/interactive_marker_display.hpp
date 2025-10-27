@@ -52,6 +52,7 @@
 #include "rviz_default_plugins/displays/interactive_markers/interactive_marker.hpp"
 #include "./interactive_marker_namespace_property.hpp"
 #include "rviz_default_plugins/displays/marker/markers/marker_base.hpp"
+#include "rviz_default_plugins/displays/marker/marker_common.hpp"
 
 namespace rviz_default_plugins
 {
@@ -140,6 +141,8 @@ private:
   rviz_common::properties::BoolProperty * enable_transparency_property_;
 
   std::unique_ptr<interactive_markers::InteractiveMarkerClient> interactive_marker_client_;
+
+  std::unique_ptr<MarkerCommon> marker_common_;
 };  // class InteractiveMarkerDisplay
 
 }  // namespace displays

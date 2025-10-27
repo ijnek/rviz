@@ -73,7 +73,8 @@ class RVIZ_DEFAULT_PLUGINS_PUBLIC InteractiveMarker : public QObject
 public:
   using SharedPtr = std::shared_ptr<InteractiveMarker>;
 
-  InteractiveMarker(Ogre::SceneNode * scene_node, rviz_common::DisplayContext * context);
+  InteractiveMarker(Ogre::SceneNode * scene_node, rviz_common::DisplayContext * context,
+                    MarkerCommon * marker_common);
   virtual ~InteractiveMarker();
 
   /// Reset contents to reflect the data from a new message.
@@ -134,6 +135,11 @@ public:
   inline const std::string & getName()
   {
     return name_;
+  }
+  
+  inline MarkerCommon * getMarkerCommon()
+  {
+    return marker_common_;
   }
 
   /// Show name above marker.
@@ -312,6 +318,8 @@ private:
   Ogre::Vector3 three_d_point_for_menu_;
 
   bool show_visual_aids_;
+
+  MarkerCommon * marker_common_;
 };  // class InteractiveMarker
 
 }  // namespace displays

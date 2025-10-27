@@ -67,6 +67,7 @@
 #include "rviz_default_plugins/displays/marker/markers/mesh_resource_marker.hpp"
 #include "rviz_default_plugins/displays/marker/markers/triangle_list_marker.hpp"
 #include "rviz_default_plugins/displays/marker/markers/marker_base.hpp"
+#include "rviz_default_plugins/displays/marker/marker_common.hpp"
 
 #include "rviz_default_plugins/displays/interactive_markers/interactive_marker.hpp"
 #include "rviz_default_plugins/displays/interactive_markers/interactive_marker_control.hpp"
@@ -109,6 +110,7 @@ void InteractiveMarkerControl::makeMarkers(
 {
   for (const auto & message_marker : message.markers) {
     markers::MarkerBase::SharedPtr marker;
+    MarkerCommon * marker_common = parent_->getMarkerCommon();
 
     // create a marker with the given type
     switch (message_marker.type) {
@@ -116,24 +118,24 @@ void InteractiveMarkerControl::makeMarkers(
       case visualization_msgs::msg::Marker::CYLINDER:
       case visualization_msgs::msg::Marker::SPHERE:
         {
-          marker.reset(new markers::ShapeMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::ShapeMarker(marker_common, context_, markers_node_));
         }
         break;
 
       case visualization_msgs::msg::Marker::ARROW:
         {
-          marker.reset(new markers::ArrowMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::ArrowMarker(marker_common, context_, markers_node_));
         }
         break;
 
       case visualization_msgs::msg::Marker::LINE_STRIP:
         {
-          marker.reset(new markers::LineStripMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::LineStripMarker(marker_common, context_, markers_node_));
         }
         break;
       case visualization_msgs::msg::Marker::LINE_LIST:
         {
-          marker.reset(new markers::LineListMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::LineListMarker(marker_common, context_, markers_node_));
         }
         break;
       case visualization_msgs::msg::Marker::SPHERE_LIST:
@@ -141,25 +143,25 @@ void InteractiveMarkerControl::makeMarkers(
       case visualization_msgs::msg::Marker::POINTS:
         {
           auto points_marker = std::make_shared<markers::PointsMarker>(
-            nullptr, context_, markers_node_);
+            marker_common, context_, markers_node_);
           points_markers_.push_back(points_marker);
           marker = points_marker;
         }
         break;
       case visualization_msgs::msg::Marker::TEXT_VIEW_FACING:
         {
-          marker.reset(new markers::TextViewFacingMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::TextViewFacingMarker(marker_common, context_, markers_node_));
         }
         break;
       case visualization_msgs::msg::Marker::MESH_RESOURCE:
         {
-          marker.reset(new markers::MeshResourceMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::MeshResourceMarker(marker_common, context_, markers_node_));
         }
         break;
 
       case visualization_msgs::msg::Marker::TRIANGLE_LIST:
         {
-          marker.reset(new markers::TriangleListMarker(nullptr, context_, markers_node_));
+          marker.reset(new markers::TriangleListMarker(marker_common, context_, markers_node_));
         }
         break;
       default:

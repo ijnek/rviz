@@ -66,13 +66,14 @@ namespace displays
 {
 
 InteractiveMarker::InteractiveMarker(
-  Ogre::SceneNode * scene_node, rviz_common::DisplayContext * context)
+  Ogre::SceneNode * scene_node, rviz_common::DisplayContext * context, MarkerCommon * marker_common)
 : context_(context),
   pose_changed_(false),
   dragging_(false),
   pose_update_requested_(false),
   heart_beat_t_(0),
-  show_visual_aids_(false)
+  show_visual_aids_(false),
+  marker_common_(marker_common)
 {
   reference_node_ = scene_node->createChildSceneNode();
   axes_ = std::make_unique<rviz_rendering::Axes>(
